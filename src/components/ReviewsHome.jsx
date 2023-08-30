@@ -3,6 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import SingleReview from "./SingleReview";
 
 const ReviewsHome = () => {
+
   const arrowStyles = {
     color: "#008371", 
     fontSize: "40px", 
@@ -21,7 +22,7 @@ const ReviewsHome = () => {
         </h5>
         <h2 className="mb-4 text-5xl font-marteni">Testimonials</h2>
       </div>    
-    <div className="container my-24 mx-auto">
+    <div className=" hidden md:block container my-24 mx-auto">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -65,6 +66,48 @@ const ReviewsHome = () => {
         <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
         <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
         </div>
+      </Carousel>
+    </div>
+    <div className=" md:hidden container my-24 mx-auto">
+      <Carousel
+        showThumbs={false}
+        showStatus={false}
+        infiniteLoop={true}
+        autoPlay={true}
+        interval={5000}
+        renderArrowPrev={(onClickHandler, hasPrev, label) =>
+          hasPrev && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, left: "10px" }} 
+              className="carousel-arrow-prev"
+            >
+              &lt; 
+            </button>
+          )
+        }
+        renderArrowNext={(onClickHandler, hasNext, label) =>
+          hasNext && (
+            <button
+              type="button"
+              onClick={onClickHandler}
+              title={label}
+              style={{ ...arrowStyles, right: "10px" }}
+              className="carousel-arrow-next"
+            >
+              &gt; 
+            </button>
+          )
+        }
+      >
+        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet bla bla bla bla bla bla bla" />
+        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
       </Carousel>
     </div>
     </>

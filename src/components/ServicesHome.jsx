@@ -12,7 +12,7 @@ const ServicesHome = () => {
         </h5>
         <h2 className="mb-8 text-5xl font-marteni">I servizi nutrizionali</h2>
       </div>
-      <div className="grid grid-cols-3 gap-2 mx-10 my-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-10 my-5">
         <SingleService
           icon={<FontAwesomeIcon icon={faWeightScale} className="text-7xl mx-auto text-customBlue my-auto" />}
           name="Lorem ipsum"
