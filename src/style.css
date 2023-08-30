@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: "Agrandir-Regular";
+    src: url("/fonts/Agrandir-Regular.otf");
+  }
+@font-face {
+    font-family: "Agrandir-GrandLight";
+    src: url("/fonts/Agrandir-GrandLight.otf");
+  }
+@font-face {
+    font-family: "Agrandir-GrandHeavy";
+    src: url("/fonts/Agrandir-GrandHeavy.otf");
+  }
+@font-face {
+    font-family: "Marteni";
+    src: url("/fonts/Marteni.ttf");
+  }
