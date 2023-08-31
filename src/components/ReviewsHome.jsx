@@ -16,7 +16,11 @@ const ReviewsHome = () => {
 
   return (
     <>
-      <div className="text-center mt-4">
+      <div className="text-center mt-4"
+      data-aos="fade"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      >
         <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase">
           Le vostre parole
         </h5>

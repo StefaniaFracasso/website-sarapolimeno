@@ -7,12 +7,22 @@ const ServicesHome = () => {
   return (
     <>
       <div className="text-center">
+        <div
+        data-aos="fade"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        >
         <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase">
           Per il tuo benessere
         </h5>
         <h2 className="mb-8 text-5xl font-marteni">I servizi nutrizionali</h2>
+        </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-10 mt-16 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-10 mt-16 mb-8"
+      data-aos="zoom-in-down"
+      data-aos-offset="600"
+      data-aos-easing="ease-in-sine"
+      >
         <SingleService
           icon={<FontAwesomeIcon icon={faWeightScale} className="text-7xl mx-auto text-customBlue my-auto" />}
           name="Percorsi di dimagrimento"
