@@ -1,3 +1,4 @@
+import Footer from "./components/Footer"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
 import PresentationHome from "./components/PresentationHome"
@@ -14,6 +15,7 @@ function App() {
     <PresentationHome />
     <ServicesHome />
     <ReviewsHome/>
+    <Footer/>
     </>
   )
 }

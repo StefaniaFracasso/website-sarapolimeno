@@ -2,11 +2,11 @@
 const SingleReview = ({ name, review }) => {
     return (      
       <div className="flex flex-col items-center w-full mb-8 md:flex-row md:mb-8 flex-between">
-        <div className="border-2 border-customGreen/50 w-80 h-48 shadow-xl mx-auto rounded-xl p-4 flex flex-col justify-between">
-          <p className="text-black text-xl italic">
-            <span className="text-3xl font-bold">“</span>
+        <div className="border-2 border-customGreen/50 w-80 h-52 shadow-xl mx-auto rounded-xl p-4 flex flex-col justify-between">
+          <p className="text-black text-md italic">
+            <span className="font-bold">“</span>
             {review}
-            <span className="text-3xl font-bold">”</span>
+            <span className="font-bold">”</span>
           </p>
           <div className="flex items-start mt-4">
             <div className="flex flex-col justify-between ml-2">

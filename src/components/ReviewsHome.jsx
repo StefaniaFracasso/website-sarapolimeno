@@ -8,7 +8,7 @@ const ReviewsHome = () => {
     color: "#008371", 
     fontSize: "40px", 
     position: "absolute", 
-    top: "50%", 
+    top: "40%", 
     transform: "translateY(-50%)", 
     zIndex: "2", 
     cursor: "pointer", 
@@ -22,7 +22,7 @@ const ReviewsHome = () => {
         </h5>
         <h2 className="mb-4 text-5xl font-marteni">Testimonials</h2>
       </div>    
-    <div className=" hidden md:block container my-24 mx-auto">
+    <div className="hidden md:block container mx-auto my-16" >
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -57,18 +57,18 @@ const ReviewsHome = () => {
         }
       >
         <div className="flex flex-col md:flex-row">
-        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet bla bla bla bla bla bla bla" />
-        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Serena"} review=" Sono contenta di essere seguita da lei durante questo delicato percorso, anche perché le sue idee di alimentazione rispettano e onorano la gioia nel nutrirsi." />
+        <SingleReview name={"Natalia"} review="Mi ha rimesso in carreggiata e mi ha dato tanto conforto anche a livello umano e psicologico. Sono davvero contenta di averla conosciuta" />
+        <SingleReview name={"Ludovica"} review="Ci siamo sentiti fisicamente ed emotivamente sempre meglio e realizzando il sogno utopico fa di “tornare” fisicamente quasi come pre-gravidanze… anzi anche meglio!" />
         </div>
-        <div className="flex flex-col md:flex-row">
-        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
+        <div className="flex flex-col md:flex-row mb-10">
+        <SingleReview name={"Sabrina"} review="Seguendo la sua dieta non prendo più le medicine per lo stomaco e sto perdendo peso e cm. Grazie mille dottoressa" />
+        <SingleReview name={"Agostino"} review="Ho imparato a nutrirmi, gestire qualche sgarro, e perché no a perdere qualche kilo di troppo.Persona squisita che ama il proprio lavoro, grazie Sara" />
+        <SingleReview name={"Ilaria"} review="Prima di essere una Dottoressa molto preparata, è una bravissima persona, sensibile, empatica, che sa metterti a tuo agio" />
         </div>
       </Carousel>
     </div>
-    <div className=" md:hidden container my-24 mx-auto">
+    <div className=" md:hidden container my-14 mx-auto">
       <Carousel
         showThumbs={false}
         showStatus={false}
@@ -102,12 +102,12 @@ const ReviewsHome = () => {
           )
         }
       >
-        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet bla bla bla bla bla bla bla" />
-        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Tizia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Caia"} review="Lorem ipsum dolor sit amet..." />
-        <SingleReview name={"Sempronia"} review="Lorem ipsum dolor sit amet..." />
+        <SingleReview name={"Serena"} review=" Sono contenta di essere seguita da lei durante questo delicato percorso, anche perché le sue idee di alimentazione rispettano e onorano la gioia nel nutrirsi." />
+        <SingleReview name={"Natalia"} review="Mi ha rimesso in carreggiata e mi ha dato tanto conforto anche a livello umano e psicologico. Sono davvero contenta di averla conosciuta" />
+        <SingleReview name={"Ludovica"} review="Ci siamo sentiti fisicamente ed emotivamente sempre meglio e realizzando il sogno utopico fa di “tornare” fisicamente quasi come pre-gravidanze… anzi anche meglio!" />
+        <SingleReview name={"Sabrina"} review="Seguendo la sua dieta non prendo più le medicine per lo stomaco e sto perdendo peso e cm. Grazie mille dottoressa" />
+        <SingleReview name={"Agostino"} review="Ho imparato a nutrirmi, gestire qualche sgarro, e perché no a perdere qualche kilo di troppo.Persona squisita che ama il proprio lavoro, grazie Sara" />
+        <SingleReview name={"Ilaria"} review="Prima di essere una Dottoressa molto preparata, è una bravissima persona, sensibile, empatica, che sa metterti a tuo agio" />
       </Carousel>
     </div>
     </>
