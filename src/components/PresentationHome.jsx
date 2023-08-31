@@ -7,7 +7,7 @@ const PresentationHome = () => {
         data-aos-easing="ease-in-sine"
       >
         <img
-          src="/assets/foto-sara-2.jpg"
+          src="src/assets/foto-sara-2.jpg"
           alt="sara polimeno"
           className="rounded-lg w-3/4 translate-x-5"
         />

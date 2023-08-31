@@ -19,8 +19,8 @@ const ServicesHome = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 mx-10 mt-16 mb-8"
-      data-aos="zoom-in-down"
-      data-aos-offset="600"
+      data-aos="fade"
+      data-aos-offset="400"
       data-aos-easing="ease-in-sine"
       >
         <SingleService
