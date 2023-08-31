@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection"
 import PresentationHome from "./components/PresentationHome"
 import ReviewsHome from "./components/ReviewsHome"
 import ServicesHome from "./components/ServicesHome"
+import StudioPositions from "./components/StudioPositions"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <PresentationHome />
     <ServicesHome />
     <ReviewsHome/>
+    <StudioPositions/>
     <Footer/>
     </>
   )

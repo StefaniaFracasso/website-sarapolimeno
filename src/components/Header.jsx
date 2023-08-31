@@ -3,7 +3,7 @@ import logo from "../assets/logo-sara.png";
 import logoOrizzontale from "../assets/logo-orizzontale.png";
 import { useMediaQuery } from "react-responsive";
 
-export default function Header() {
+const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const isSmallScreen = useMediaQuery({ maxWidth: 768 });
 
@@ -120,3 +120,6 @@ export default function Header() {
     </div>
   );
 }
+
+
+export default Header
