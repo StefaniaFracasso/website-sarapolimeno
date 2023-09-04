@@ -1,6 +1,6 @@
 const HeroSection = () => {
     return (
-      <div className="relative overflow-hidden bg-cover bg-no-repeat bg-center bg-hero-bg h-screen">
+      <div className="relative overflow-hidden h-screen bg-cover bg-no-repeat bg-center bg-hero-bg">
         <div className="absolute inset-0 bg-slate-500/50">
           <div className="flex h-full items-center justify-start container mx-auto px-4 py-24 text-white">
             <div className="px-5">

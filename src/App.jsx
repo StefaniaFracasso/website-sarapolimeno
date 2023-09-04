@@ -1,26 +1,18 @@
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import HeroSection from "./components/HeroSection"
-import PresentationHome from "./components/PresentationHome"
-import ReviewsHome from "./components/ReviewsHome"
-import ServicesHome from "./components/ServicesHome"
-import StudioPositions from "./components/StudioPositions"
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Homepage from "./components/Homepage";
 
 function App() {
-
   return (
-    <>
-    <Header/>
-    <HeroSection/>
-    <PresentationHome />
-    <ServicesHome />
-    <ReviewsHome/>
-    <StudioPositions/>
-    <Footer/>
-    </>
-  )
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
 }
 
-export default App
-
+export default App;
