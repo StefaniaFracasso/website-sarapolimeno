@@ -7,7 +7,7 @@ const StudioPositions = () => {
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
           >
-            <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase">
+            <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase mb-2">
               I miei studi
             </h5>
             <h2 className="mb-8 text-5xl font-marteni">Dove ricevo</h2>

@@ -18,7 +18,7 @@ const PresentationHome = () => {
           data-aos-offset="200"
           data-aos-easing="ease-in-sine"
         >
-          <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase">
+          <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase mb-2">
             Chi sono
           </h5>
           <h2 className="mb-8 text-5xl font-marteni">Ti parlo di me</h2>
