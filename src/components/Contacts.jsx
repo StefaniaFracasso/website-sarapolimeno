@@ -28,7 +28,7 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex flex-col items-center align-center mt-20 h-screen">
+    <div className="flex flex-col items-center align-center mt-20 mx-4 h-screen">
       <div>
         <h2 className="mb-4 text-5xl font-marteni">Contatti</h2>
         <p className="text-xl mb-8">
