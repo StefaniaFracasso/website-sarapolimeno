@@ -1,6 +1,4 @@
 import SingleService from "./SingleService";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWeightScale,faVenus, faNotesMedical, faSeedling, faHeart, faPlateWheat } from '@fortawesome/free-solid-svg-icons'
 
 
 const ServicesHome = () => {
@@ -24,32 +22,32 @@ const ServicesHome = () => {
       data-aos-easing="ease-in-sine"
       >
         <SingleService
-          icon={<FontAwesomeIcon icon={faWeightScale} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/weight-scale.png" className="w-1/2 mx-auto my-auto" />}
           name="Percorsi di dimagrimento"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />
         <SingleService
-          icon={<FontAwesomeIcon icon={faVenus} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/diet.png" className="w-1/2 mx-auto my-auto" />}
           name="Alimentazione femminile"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />
         <SingleService
-          icon={<FontAwesomeIcon icon={faNotesMedical} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/healthy-living.png" className="w-1/2 mx-auto my-auto" />}
           name="Nutrizione clinica"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />
         <SingleService
-          icon={<FontAwesomeIcon icon={faSeedling} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/nutrition.png" className="w-1/2 mx-auto my-auto" />}
           name="Benessere intestinale"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />
         <SingleService
-          icon={<FontAwesomeIcon icon={faHeart} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/healthy-heart.png" className="w-1/2 mx-auto my-auto" />}
           name="Disturbi dell'alimentazione"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />
         <SingleService
-          icon={<FontAwesomeIcon icon={faPlateWheat} className="text-7xl mx-auto text-customBlue my-auto" />}
+          icon={<img src="/src/assets/icons/nutrition-plan.png" className="w-1/2 mx-auto my-auto" />}
           name="Educazione alimentare"
           desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur interdum tincidunt luctus. Integer id arcu posuere, congue ligula ac, pulvinar."
         />

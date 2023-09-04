@@ -151,9 +151,9 @@ const Header = () => {
   }, []);
 
   return (
-    <div className={`flex items-center justify-between border-b border-gray-400 ${scrolling ? "py-1" : "py-3"} px-5 bg-white z-50 sticky top-0 transition-all duration-500 ease-in-out`}>
+    <div className={`flex items-center justify-between  drop-shadow-md ${scrolling ? "py-1" : "py-3"} px-5 bg-white z-50 sticky top-0 transition-all duration-500 ease-in-out`}>
       {scrolling? (
-      <div className="lg:order-2">
+      <div>
       <nav>
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
           <li className="my-4 uppercase hover:text-customGreen text-bold">
