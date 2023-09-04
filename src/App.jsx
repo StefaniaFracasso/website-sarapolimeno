@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Homepage from "./components/Homepage";
+import ChiSono from "./components/ChiSono";
+import Contacts from "./components/Contacts";
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/chisono" element={<ChiSono />} />
+        <Route path="/contatti" element={<Contacts />} />
       </Routes>
       <Footer />
     </BrowserRouter>

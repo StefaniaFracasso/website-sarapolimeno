@@ -128,6 +128,7 @@ import { useState, useEffect } from "react";
 import logo from "../assets/logo-sara.png";
 import logoOrizzontale from "../assets/logo-orizzontale.png";
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -157,10 +158,10 @@ const Header = () => {
       <nav>
         <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
           <li className="my-4 uppercase hover:text-customGreen text-bold">
-            <a href="/about">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li className="my-4 uppercase hover:text-customGreen text-bold">
-            <a href="/portfolio">Chi sono</a>
+          <Link to="/chisono">Chi sono</Link>
           </li>
           <li className="my-4 uppercase hover:text-customGreen text-bold">
             <a href="/contact">Servizi</a>
@@ -173,10 +174,10 @@ const Header = () => {
         <nav>
           <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
             <li className="my-4 uppercase hover:text-customGreen text-bold">
-              <a href="/about">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className="my-4 uppercase hover:text-customGreen text-bold">
-              <a href="/portfolio">Chi sono</a>
+            <Link to="/chisono">Chi sono</Link>
             </li>
             <li className="my-4 uppercase hover:text-customGreen text-bold">
               <a href="/contact">Servizi</a>

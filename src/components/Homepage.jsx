@@ -1,8 +1,8 @@
-import HeroSection from "./HeroSection"
-import PresentationHome from "./PresentationHome"
-import ReviewsHome from "./ReviewsHome"
-import ServicesHome from "./ServicesHome"
-import StudioPositions from "./StudioPositions"
+import HeroSection from "./homepage/HeroSection"
+import PresentationHome from "./homepage/PresentationHome"
+import ReviewsHome from "./homepage/ReviewsHome"
+import ServicesHome from "./homepage/ServicesHome"
+import StudioPositions from "./homepage/StudioPositions"
 
 const Homepage = () => {
     return (
