@@ -24,7 +24,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/weight-scale.png"
+              src="/assets/icons/weight-scale.png"
               className="w-1/2 mx-auto my-auto"
             />
           }
@@ -34,7 +34,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/diet.png"
+              src="/assets/icons/diet.png"
               className="w-1/2 mx-auto my-auto"
             />
           }
@@ -44,7 +44,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/healthy-living.png"
+              src="/assets/icons/healthy-living.png"
               className="w-1/2 mx-auto my-auto"
             />
           }
@@ -54,7 +54,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/nutrition.png"
+              src="/assets/icons/nutrition.png"
               className="w-1/2 mx-auto my-auto"
             />
           }
@@ -64,7 +64,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/healthy-heart.png"
+              src="/assets/icons/healthy-heart.png"
               className="w-1/2 mx-auto my-auto"
             />
           }
@@ -74,7 +74,7 @@ const ServicesHome = () => {
         <SingleService
           icon={
             <img
-              src="/src/assets/icons/nutrition-plan.png"
+              src="/assets/icons/nutrition-plan.png"
               className="w-1/2 mx-auto my-auto"
             />
           }

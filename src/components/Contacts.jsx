@@ -5,6 +5,7 @@ const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
 
+  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -45,6 +46,7 @@ const Contacts = () => {
                 name="name"
                 type="text"
                 placeholder="Nome"
+                required
               />
             </div>
             <div className="w-full md:w-1/2 px-3">
@@ -56,6 +58,7 @@ const Contacts = () => {
                 name="surname"
                 type="text"
                 placeholder="Cognome"
+                required
               />
             </div>
           </div>
@@ -68,6 +71,8 @@ const Contacts = () => {
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 name="user_email"
                 type="email"
+                placeholder="Email"
+                required
               />
             </div>
           </div>
@@ -80,6 +85,7 @@ const Contacts = () => {
                 className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
                 name="message"
                 placeholder="Scrivi qui la tua richiesta"
+                required
               ></textarea>
             </div>
           </div>
@@ -105,39 +111,6 @@ const Contacts = () => {
           </p>
         )}
       </div>
-      {/* <div>
-        <h2 className="mb-4 text-5xl font-marteni">Dove ricevo</h2>
-        <div className="flex flex-col md:flex-row">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11191.162932755891!2d9.147369!3d45.4740193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1bde2a1e99f%3A0x3cf348d97e87659b!2sDr.ssa%20Sara%20Anna%20Polimeno%20-%20Biologa%20Nutrizionista%20Milano!5e0!3m2!1sit!2sit!4v1693491115839!5m2!1sit!2sit"
-            width="400"
-            height="250"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-                    <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11191.162932755891!2d9.147369!3d45.4740193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1bde2a1e99f%3A0x3cf348d97e87659b!2sDr.ssa%20Sara%20Anna%20Polimeno%20-%20Biologa%20Nutrizionista%20Milano!5e0!3m2!1sit!2sit!4v1693491115839!5m2!1sit!2sit"
-            width="400"
-            height="250"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-                    <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11191.162932755891!2d9.147369!3d45.4740193!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c1bde2a1e99f%3A0x3cf348d97e87659b!2sDr.ssa%20Sara%20Anna%20Polimeno%20-%20Biologa%20Nutrizionista%20Milano!5e0!3m2!1sit!2sit!4v1693491115839!5m2!1sit!2sit"
-            width="400"
-            height="250"
-            style={{ border: "0" }}
-            allowFullScreen=""
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
-        </div>
-
-      </div> */}
     </div>
   );
 };
