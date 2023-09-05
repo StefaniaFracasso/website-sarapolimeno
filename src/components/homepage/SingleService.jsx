@@ -2,7 +2,7 @@
 const SingleService = ({ icon, name, desc }) => {
     return (
       <div className="flex flex-row border-2 border-grey-400 rounded-lg">
-        <div className="w-1/3 p-4 flex justify-center align-middle">
+        <div className="w-1/2 p-4 flex justify-center align-middle">
           {icon}
         </div>
         <div className="w-2/3 p-4 flex flex-col">
