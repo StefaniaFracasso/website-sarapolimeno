@@ -10,6 +10,10 @@ const ChiSono = () => {
           alt="dr.ssa Sara Anna Polimeno" 
           className="rounded-lg w-3/4 translate-x-5"
           />
+          <img src="/assets/img/foto-sara-2.jpg" 
+          alt="dr.ssa Sara Anna Polimeno" 
+          className="rounded-lg w-3/4 translate-x-5"
+          />
         </div>
         <div>
           <div
