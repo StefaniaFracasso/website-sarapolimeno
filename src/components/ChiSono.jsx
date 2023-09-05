@@ -6,7 +6,7 @@ const ChiSono = () => {
         data-aos-offset="200"
         data-aos-easing="ease-in-sine"
       >
-        <img src="/public/assets/img/foto-sara-2.jpg" 
+        <img src="/assets/img/foto-sara-2.jpg" 
         alt="dr.ssa Sara Anna Polimeno" 
         className="rounded-lg w-3/4 translate-x-5"
         />
