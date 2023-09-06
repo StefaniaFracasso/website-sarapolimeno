@@ -1,6 +1,6 @@
 const StudioPositions = () => {
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-10">
       <div className="flex flex-row flex-wrap">
         <div className="w-full md:w-1/2 lg:w-1/3 p-4">
           <div
