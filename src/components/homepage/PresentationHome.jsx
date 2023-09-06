@@ -17,7 +17,7 @@ const PresentationHome = () => {
       <div>
         <div
           data-aos="fade-left"
-          data-aos-offset="200"
+          data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
           <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase mb-2">
@@ -27,41 +27,37 @@ const PresentationHome = () => {
         </div>
         <div
           data-aos="fade"
-          data-aos-offset="500"
+          data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
           <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            dolorem obcaecati est suscipit quis recusandae similique assumenda
-            id ipsa, ratione voluptas nam quam, eveniet quibusdam accusamus
-            dolores labore ipsam corporis!
+            Sono la Dott.ssa Sara Anna Polimeno, Biologo Nutrizionista con una
+            formazione di eccellenza conseguita presso l&apos;<strong>Università Campus
+            Bio Medico di Roma</strong>, dove ho ottenuto una votazione di 110/110 con
+            lode. La mia abilitazione professionale è stata conferita nel 2014
+            dall&apos;Università della Tuscia di Viterbo (Numero di
+            registrazione: AA_072681).
           </p>
           <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            dolorem obcaecati est suscipit quis recusandae similique assumenda
-            id ipsa, ratione voluptas nam quam, eveniet quibusdam accusamus
-            dolores labore ipsam corporis!
+            <strong>La mia missione è andare oltre la semplice consulenza nutrizionale.</strong> <br />
+            Sono guidata dall&apos;empatia e dalla profonda comprensione delle
+            sfide che i miei pazienti affrontano. La mia esperienza mi ha
+            insegnato che <strong>ogni individuo è unico</strong>, con esigenze e obiettivi
+            specifici. <br />Attualmente, offro i miei servizi come <strong>Biologo
+            Nutrizionista a Milano</strong> in tre studi. 
           </p>
           <p className="my-3">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            dolorem obcaecati est suscipit quis recusandae similique assumenda
-            id ipsa, ratione voluptas nam quam, eveniet quibusdam accusamus
-            dolores labore ipsam corporis!
+            Fornisco un <strong>sostegno completo che va oltre la dieta</strong>, perché credo
+            che il benessere dipenda dalla comprensione delle esigenze
+            individuali e dalla creazione di percorsi personalizzati.
           </p>
-          <ul>
-            <li className="list-disc list-inside mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-              quaerat veniam nemo eligendi voluptas ipsam excepturi. Fugit
-              fugiat vitae recusandae beatae iure saepe, eaque eveniet
-              perferendis commodi corporis aperiam voluptas?
-            </li>
-            <li className="list-disc list-inside mb-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi
-              quaerat veniam nemo eligendi voluptas ipsam excepturi. Fugit
-              fugiat vitae recusandae beatae iure saepe, eaque eveniet
-              perferendis commodi corporis aperiam voluptas?
-            </li>
-          </ul>
+          <p className="my-3">
+            Sono qui per aiutarti a raggiungere i tuoi obiettivi di salute come
+            Biologo Nutrizionista a Milano. Se stai cercando un professionista
+            esperto per migliorare il tuo benessere attraverso l&apos;alimentazione,
+            sono a disposizione per creare un <strong>percorso personalizzato su misura
+            per te</strong>.
+          </p>
           <Link to="/chisono">
             <button
               type="button"

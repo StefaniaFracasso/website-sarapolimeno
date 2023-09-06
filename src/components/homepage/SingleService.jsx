@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const SingleService = ({ icon, name, desc }) => {
     return (
-      <div className="flex flex-row border-2 border-grey-400 rounded-lg">
+      <div className="flex flex-row border-2 border-grey-400 rounded-lg h-100">
         <div className="w-1/2 p-4 flex justify-center align-middle">
           {icon}
         </div>

@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import logo from "/assets/img/logo-sara.png";
 import logoOrizzontale from "/assets/img/logo-orizzontale.png";
-import { useMediaQuery } from "react-responsive";
+// import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
-const Header = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const isSmallScreen = useMediaQuery({ maxWidth: 768 });
+const Header2 = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    // const isSmallScreen = useMediaQuery({ maxWidth: 768 });
   const [scrolling, setScrolling] = useState(false);
 
   const handleScroll = () => {
@@ -25,63 +25,59 @@ const Header = () => {
   }, []);
 
   return (
-    <div
-      className={`flex items-center justify-between  drop-shadow-md ${
+    <div className={`flex items-center justify-between  drop-shadow-md ${
         scrolling ? "py-1" : "py-3"
-      } px-5 bg-white z-50 sticky top-0 transition-all duration-500 ease-in-out`}
-    >
-      <div>
-        <nav>
-          <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-            <li className="my-4 uppercase hover:text-customGreen text-bold">
-              <Link to="/">Home</Link>
-            </li>
-            <li className="my-4 uppercase hover:text-customGreen text-bold">
-              <Link to="/chisono">Chi sono</Link>
-            </li>
-            <li className="my-4 uppercase hover:text-customGreen text-bold">
-              <a href="/contact">La visita</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-{isSmallScreen || scrolling ? (
-  <div>
-    <a href="/">
-      <img src={logoOrizzontale} alt="logo" className="h-20" />
-    </a>
-  </div>
-) : (
-  <div className="lg-order-2 transform -translate-x-1/2 left-1/2 top-3 absolute z-40">
-    <a href="/">
-      <img src={logo} alt="logo" className="w-32 rounded-full" />
-    </a>
-  </div>
-)}
-      <div className="lg:order-3">
-        <nav>
-          <ul className="DESKTOP-MENU hidden space-x-8 lg:flex">
-            <li>
-              <Link to={"/contatti"}>
-                <button>
-                  <button
-                    type="button"
-                    className="mb-4 lg:mb-0 lg:mt-2 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                  >
-                    Contattami
-                  </button>
-                </button>
+      } px-5 bg-white z-50 sticky top-0 transition-all duration-500 ease-in-out`}>
+      {/* menù desktop */}
+      <nav className="hidden md:block container">
+        <div className="flex justify-between items-center ms-5">
+          <div>
+            <ul className="flex space-x-8">
+              <li className="my-4 uppercase hover:text-customGreen text-bold">
+                <Link to="/">Home</Link>
+              </li>
+              <li className="my-4 uppercase hover:text-customGreen text-bold">
+                <Link to="/chisono">Chi sono</Link>
+              </li>
+              <li className="my-4 uppercase hover:text-customGreen text-bold">
+                <a href="/contact">La visita</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            {scrolling ? (
+              <Link to={"/"}>
+                <img src={logoOrizzontale} alt="logo" className="h-20" />
               </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div className="lg:hidden">
-        <section className="MOBILE-MENU flex lg:hidden">
-          <div
+            ) : (
+              <div className="lg-order-2 transform -translate-x-1/2 left-1/2 top-3 absolute z-40">
+                <Link to={"/"}>
+                  <img src={logo} alt="logo" className="w-32 rounded-full" />
+                </Link>
+              </div>
+            )}
+          </div>
+          <div>
+            <Link to={"/contatti"}>
+              <button
+                type="button"
+                className="mb-4 lg:mb-0 lg:mt-2 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
+                data-te-ripple-init
+                data-te-ripple-color="light"
+              >
+                Contattami
+              </button>
+            </Link>
+          </div>
+        </div>
+      </nav>
+      {/* menù mobile */}
+      <nav className="md:hidden container">
+        <div className="flex justify-between items-center">
+            <div>
+                <img src={logoOrizzontale} alt="logo" className="h-24"/>
+            </div>
+            <div
             className="HAMBURGER-ICON space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
@@ -134,8 +130,8 @@ const Header = () => {
               </li>
             </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </nav>
       <style>{`
         .hideMenuNav {
           display: none;
@@ -159,5 +155,4 @@ const Header = () => {
   );
 };
 
-export default Header;
-
+export default Header2;

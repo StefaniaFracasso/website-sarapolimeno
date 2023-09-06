@@ -33,12 +33,12 @@ function Footer() {
           <div className="hidden md:block w-full lg:w-4/12 px-4">
             <div className="flex flex-wrap items-top mb-6 justify-center lg:justify-end">
               <div className="w-full lg:w-auto px-4 ml-auto">
+                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Home</a>
                 <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Chi sono</a>
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Servizi</a>
               </div>
               <div className="w-full lg:w-auto px-4">
                 <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">La prima visita</a>
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Consigli nutrizionali</a>
+                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Contattami</a>
               </div>
             </div>
           </div>

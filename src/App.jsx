@@ -1,15 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Homepage from "./components/Homepage";
 
 import Contacts from "./components/Contacts";
 import ChiSono from "./components/homepage/ChiSono";
+import Header2 from "./components/Header2";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
+      {/* <Header /> */}
+      <Header2/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/chisono" element={<ChiSono />} />
