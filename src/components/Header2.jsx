@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import logo from "/assets/img/logo-sara.png";
 import logoOrizzontale from "/assets/img/logo-orizzontale.png";
-// import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
 const Header2 = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    // const isSmallScreen = useMediaQuery({ maxWidth: 768 });
   const [scrolling, setScrolling] = useState(false);
 
   const handleScroll = () => {
@@ -25,12 +23,11 @@ const Header2 = () => {
   }, []);
 
   return (
-    <div className={`flex items-center justify-between  drop-shadow-md ${
+    <div className={`flex items-center justify-between bg-white drop-shadow-md ${
         scrolling ? "py-1" : "py-3"
-      } px-5 bg-white z-50 sticky top-0 transition-all duration-500 ease-in-out`}>
+      } px-5 z-50 sticky top-0 transition-all duration-500 ease-in-out`}>
       {/* menù desktop */}
-      <nav className="hidden md:block container">
-        <div className="flex justify-between items-center ms-5">
+        <div className="flex justify-between items-center hidden md:inline-flex w-full">
           <div>
             <ul className="flex space-x-8">
               <li className="my-4 uppercase hover:text-customGreen text-bold">
@@ -69,8 +66,7 @@ const Header2 = () => {
               </button>
             </Link>
           </div>
-        </div>
-      </nav>
+      </div>
       {/* menù mobile */}
       <nav className="md:hidden container">
         <div className="flex justify-between items-center">
