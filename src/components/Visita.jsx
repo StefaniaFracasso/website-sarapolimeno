@@ -9,7 +9,7 @@ const Visita = () => {
         </h5>
         <h2 className="mb-8 text-5xl font-marteni">La prima visita</h2>
       </div>
-      <div className="container mx-auto mt-12">
+      <div className="container mx-4 md:mx-auto mt-12">
         <p className="mb-4">
           La visita nutrizionale consiste in un percorso,{" "}
           <strong>
