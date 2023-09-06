@@ -22,6 +22,10 @@ const Header2 = () => {
     };
   }, []);
 
+  const closeMenu = () => {
+    setIsNavOpen(false);
+  };
+
   return (
     <div className={`flex items-center justify-between bg-white drop-shadow-md ${
         scrolling ? "py-1" : "py-3"
@@ -31,13 +35,13 @@ const Header2 = () => {
           <div>
             <ul className="flex space-x-8">
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={closeMenu}>Home</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to="/chisono">Chi sono</Link>
+                <Link to="/chisono"  onClick={closeMenu}>Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/laprimavisita">La visita</a>
+                <a href="/laprimavisita"  onClick={closeMenu}>La visita</a>
               </li>
             </ul>
           </div>
@@ -61,6 +65,7 @@ const Header2 = () => {
                 className="mb-4 lg:mb-0 lg:mt-2 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
                 data-te-ripple-init
                 data-te-ripple-color="light"
+                onClick={closeMenu}
               >
                 Contattami
               </button>
