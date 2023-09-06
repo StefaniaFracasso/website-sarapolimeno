@@ -37,7 +37,7 @@ const Header2 = () => {
                 <Link to="/chisono">Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/contact">La visita</a>
+                <a href="/laprimavisita">La visita</a>
               </li>
             </ul>
           </div>
@@ -102,13 +102,13 @@ const Header2 = () => {
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/about">Home</a>
+                <Link to={"/"}>Home</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/portfolio">Chi sono</a>
+                <Link to={"/chisono"}>Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/contact">La visita</a>
+                <Link to={"/laprimavisita"}>La visita</Link>
               </li>
               <li>
                 <Link to={"/contatti"}>
