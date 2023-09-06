@@ -4,8 +4,8 @@ import emailjs from "@emailjs/browser";
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(true);
 
-  
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -35,6 +35,38 @@ const Contacts = () => {
         <p className="text-xl mb-8">
           Compila il form per richiedere maggiori informazioni!
         </p>
+        {emailSent && showAlert ? (
+          // <p className="px-6 py-4 bg-customGreen text-white text-md rounded-md">
+          //   La tua richiesta è stata inviata correttamente.
+          // </p>
+          <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
+            <span className="text-xl inline-block mr-5 align-middle">
+              <i className="fas fa-bell" />
+            </span>
+            <span className="inline-block align-middle mr-8">
+              Email inviata correttamente!
+            </span>
+            <button className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" onClick={()=>setShowAlert(false)}>
+              <span>×</span>
+            </button>
+          </div>
+        ): null}
+        {errorMessage ? (
+          // <p className="px-6 py-4 bg-red-500 text-white text-md rounded-md">
+          //   {errorMessage}
+          // </p>
+          <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
+            <span className="text-xl inline-block mr-5 align-middle">
+              <i className="fas fa-bell" />
+            </span>
+            <span className="inline-block align-middle mr-8">
+              Errore nell&apos;invio della richiesta
+            </span>
+            <button className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none" onClick={()=>setShowAlert(false)}>
+              <span>×</span>
+            </button>
+          </div>
+        ): null}
         <form className="w-full max-w-lg" onSubmit={sendEmail}>
           <div className="flex flex-wrap -mx-3 mb-6">
             <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
@@ -100,16 +132,6 @@ const Contacts = () => {
             </button>
           </div>
         </form>
-        {emailSent && (
-          <p className="px-6 py-4 bg-customGreen text-white text-md rounded-md">
-            La tua richiesta è stata inviata correttamente.
-          </p>
-        )}
-        {errorMessage && (
-          <p className="px-6 py-4 bg-red-500 text-white text-md rounded-md">
-            {errorMessage}
-          </p>
-        )}
       </div>
     </div>
   );

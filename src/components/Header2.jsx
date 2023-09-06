@@ -112,7 +112,6 @@ const Header2 = () => {
               </li>
               <li>
                 <Link to={"/contatti"}>
-                  <button>
                     <button
                       type="button"
                       className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
@@ -121,7 +120,6 @@ const Header2 = () => {
                     >
                       Contattami
                     </button>
-                  </button>
                 </Link>
               </li>
             </ul>
