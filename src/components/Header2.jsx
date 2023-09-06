@@ -35,13 +35,13 @@ const Header2 = () => {
           <div>
             <ul className="flex space-x-8">
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to="/" onClick={closeMenu}>Home</Link>
+                <Link to="/" >Home</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to="/chisono"  onClick={closeMenu}>Chi sono</Link>
+                <Link to="/chisono"  >Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <a href="/laprimavisita"  onClick={closeMenu}>La visita</a>
+                <a href="/laprimavisita"  >La visita</a>
               </li>
             </ul>
           </div>
@@ -65,7 +65,7 @@ const Header2 = () => {
                 className="mb-4 lg:mb-0 lg:mt-2 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
                 data-te-ripple-init
                 data-te-ripple-color="light"
-                onClick={closeMenu}
+                
               >
                 Contattami
               </button>
@@ -107,16 +107,16 @@ const Header2 = () => {
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to={"/"}>Home</Link>
+                <Link to={"/"} onClick={closeMenu}>Home</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to={"/chisono"}>Chi sono</Link>
+                <Link to={"/chisono"} onClick={closeMenu}>Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen text-bold">
-                <Link to={"/laprimavisita"}>La visita</Link>
+                <Link to={"/laprimavisita"} onClick={closeMenu}>La visita</Link>
               </li>
               <li>
-                <Link to={"/contatti"}>
+                <Link to={"/contatti"} onClick={closeMenu}>
                     <button
                       type="button"
                       className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
