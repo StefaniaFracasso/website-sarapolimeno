@@ -20,7 +20,7 @@ export default {
         'marteni': ['marteni','serif']
       },
       backgroundImage: {
-        'hero-bg': 'url(/assets/img/foto-prova-hero.jpg)'
+        'hero-bg': 'url(/assets/img/hero-photo-healthy-food.jpg)'
       }
     },
   },

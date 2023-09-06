@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -33,12 +34,12 @@ function Footer() {
           <div className="hidden md:block w-full lg:w-4/12 px-4">
             <div className="flex flex-wrap items-top mb-6 justify-center lg:justify-end">
               <div className="w-full lg:w-auto px-4 ml-auto">
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Home</a>
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Chi sono</a>
+                <Link to={"/"} className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Home</Link>
+                <Link to={"/chisono"} className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Chi sono</Link>
               </div>
               <div className="w-full lg:w-auto px-4">
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">La prima visita</a>
-                <a className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Contattami</a>
+                <Link to={"/laprimavisita"} className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">La prima visita</Link>
+                <Link to={"/contatti"} className="block uppercase text-blueGray-500 text-sm font-semibold mb-2 text-white hover:text-customPeach cursor-pointer">Contattami</Link>
               </div>
             </div>
           </div>
