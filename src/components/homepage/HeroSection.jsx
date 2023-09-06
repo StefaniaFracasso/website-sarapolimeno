@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const HeroSection = () => {
     return (
       <div className="relative overflow-hidden h-screen bg-cover bg-no-repeat bg-center bg-hero-bg">
-        <div className="absolute inset-0 bg-slate-500/50">
+        <div className="absolute inset-0 bg-slate-500/25">
           <div className="flex h-full items-center justify-start container mx-auto px-4 py-24 text-white">
             <div className="px-5">
               <h1 className="mb-2 text-6xl font-marteni drop-shadow-lg">Sara Anna Polimeno</h1>
