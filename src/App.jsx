@@ -5,10 +5,16 @@ import Contacts from "./components/Contacts";
 import ChiSono from "./components/ChiSono";
 import Header2 from "./components/Header2";
 import Visita from "./components/Visita";
+import CookieBot from "react-cookiebot";
+import ReactGA from 'react-ga';
 
 function App() {
+  const domainGroupId = '4077cddb-55f0-4fb9-805f-dcafd25d444e';
+  ReactGA.initialize('G-FGC0DJFY0T');
+
   return (
     <BrowserRouter>
+      <CookieBot domainGroupId={domainGroupId} />
       <Header2/>
       <Routes>
         <Route path="/" element={<Homepage />} />
