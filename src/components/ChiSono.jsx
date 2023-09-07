@@ -9,9 +9,9 @@ const ChiSono = () => {
       </div>
       <div className="container grid md:grid-cols-2 gap-2 justify-center items-center mx-auto my-10">
         <div
-          data-aos="fade-right"
-          data-aos-offset="300"
-          data-aos-easing="ease-in-sine"
+          // data-aos="fade-right"
+          // data-aos-offset="200"
+          // data-aos-easing="ease-in-sine"
         >
           <img
             src="/assets/img/foto-sara-1.jpg"

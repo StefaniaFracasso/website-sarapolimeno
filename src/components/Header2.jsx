@@ -34,13 +34,13 @@ const Header2 = () => {
         <div className="flex justify-between items-center hidden md:inline-flex w-full">
           <div>
             <ul className="flex space-x-8">
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <Link to="/" >Home</Link>
               </li>
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <Link to="/chisono"  >Chi sono</Link>
               </li>
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <a href="/laprimavisita"  >La visita</a>
               </li>
             </ul>
@@ -106,13 +106,13 @@ const Header2 = () => {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <Link to={"/"} onClick={closeMenu}>Home</Link>
               </li>
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <Link to={"/chisono"} onClick={closeMenu}>Chi sono</Link>
               </li>
-              <li className="my-4 uppercase hover:text-customGreen text-bold">
+              <li className="my-4 uppercase hover:text-customGreen">
                 <Link to={"/laprimavisita"} onClick={closeMenu}>La visita</Link>
               </li>
               <li>
