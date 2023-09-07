@@ -6,7 +6,7 @@ import ChiSono from "./components/ChiSono";
 import Header2 from "./components/Header2";
 import Visita from "./components/Visita";
 import CookieBot from "react-cookiebot";
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 function App() {
   const domainGroupId = '4077cddb-55f0-4fb9-805f-dcafd25d444e';
