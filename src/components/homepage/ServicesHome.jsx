@@ -98,6 +98,7 @@
 
 // export default ServicesHome;
 
+import { Link } from "react-router-dom";
 import SingleService from "./SingleService";
 
 const ServicesHome = () => {
@@ -159,6 +160,7 @@ const ServicesHome = () => {
         </div>
       </div>
       <div className="flex justify-center">
+        <Link to={"/laprimavisita"}>
         <button
           type="button"
           className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
@@ -167,6 +169,7 @@ const ServicesHome = () => {
         >
           Scopri di più
         </button>
+        </Link>
       </div>
     </div>
   );
