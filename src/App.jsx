@@ -14,8 +14,8 @@ function App() {
 
   return (
     <BrowserRouter>
-      <CookieBot domainGroupId={domainGroupId} />
       <Header2/>
+      <CookieBot domainGroupId={domainGroupId}/>
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/chisono" element={<ChiSono />} />
