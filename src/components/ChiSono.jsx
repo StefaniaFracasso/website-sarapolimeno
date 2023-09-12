@@ -1,6 +1,6 @@
 const ChiSono = () => {
   return (
-    <div className="mt-20">
+    <div className="mt-4 md:mt-20">
       <div className="text-center">
         <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase mb-2">
           Dottoressa
