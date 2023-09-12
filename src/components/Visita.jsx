@@ -2,7 +2,7 @@ import Contacts from "./Contacts";
 
 const Visita = () => {
   return (
-    <div className="mt-4 md:mt-20 mb-10">
+    <div className="mt-6 md:mt-20 mb-10">
       <div className="text-center">
         <h5 className="text-m font-agrandir-GrandHeavy text-customGreen uppercase mb-2">
           conosciamoci
