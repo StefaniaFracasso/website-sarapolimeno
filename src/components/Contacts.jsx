@@ -29,12 +29,14 @@ const Contacts = () => {
   };
 
   return (
-    <div className="flex flex-col items-center align-center mt-20 mx-4 h-screen">
+    <div className="flex flex-col items-center align-center mt-4 md:mt-20 mx-4 h-screen">
       <div>
+        <div className="text-center">
         <h2 className="mb-4 text-5xl font-marteni">Contatti</h2>
-        <p className="text-xl mb-8">
+        <p className="text-xl mb-4">
           Compila il form per richiedere maggiori informazioni!
         </p>
+        </div>
         {emailSent && showAlert ? (
           // <p className="px-6 py-4 bg-customGreen text-white text-md rounded-md">
           //   La tua richiesta è stata inviata correttamente.
@@ -68,8 +70,8 @@ const Contacts = () => {
           </div>
         ): null}
         <form className="w-full max-w-lg" onSubmit={sendEmail}>
-          <div className="flex flex-wrap -mx-3 mb-6">
-            <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+          <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Nome
               </label>
@@ -94,7 +96,7 @@ const Contacts = () => {
               />
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full px-3">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 E-mail
@@ -108,7 +110,7 @@ const Contacts = () => {
               />
             </div>
           </div>
-          <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="flex flex-wrap -mx-3 mb-4">
             <div className="w-full px-3">
               <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Messaggio
