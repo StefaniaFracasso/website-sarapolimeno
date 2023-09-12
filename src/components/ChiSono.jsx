@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 const ChiSono = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+  
   return (
     <div className="mt-6 md:mt-20">
       <div className="text-center">

@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [showAlert, setShowAlert] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
 
   const sendEmail = (e) => {
     e.preventDefault();

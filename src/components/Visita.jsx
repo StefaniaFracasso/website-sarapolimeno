@@ -1,6 +1,12 @@
+import { useEffect } from "react";
 import Contacts from "./Contacts";
 
 const Visita = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
+  
   return (
     <div className="mt-6 md:mt-20 mb-10">
       <div className="text-center">
