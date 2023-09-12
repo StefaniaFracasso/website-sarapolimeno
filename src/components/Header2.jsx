@@ -41,7 +41,7 @@ const Header2 = () => {
                 <Link to="/chisono"  >Chi sono</Link>
               </li>
               <li className="my-4 uppercase hover:text-customGreen">
-                <Link href="/laprimavisita"  >La visita</Link>
+                <Link to="/laprimavisita">La visita</Link>
               </li>
             </ul>
           </div>
