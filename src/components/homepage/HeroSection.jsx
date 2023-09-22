@@ -6,7 +6,7 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-slate-500/25">
           <div className="flex h-full items-center justify-start container mx-auto px-4 py-24 text-white">
             <div className="px-5">
-              <h1 className="mb-2 text-6xl font-marteni drop-shadow-lg">Sara Anna Polimeno</h1>
+              <h1 className="mb-2 py-2 text-6xl font-marteni drop-shadow-lg">Sara Anna Polimeno</h1>
               <h3 className="mb-6 text-2xl font-agrandir-GrandHeavy text-customGreen">Biologo Nutrizionista</h3>
               <Link to={'/contatti'}>
               <button
