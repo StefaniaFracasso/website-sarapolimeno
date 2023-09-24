@@ -1,15 +1,23 @@
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet";
+import Modal from "./Modal";
 
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [showAlert, setShowAlert] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-  });
+  }, []);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -24,17 +32,18 @@ const Contacts = () => {
       .then((response) => {
         console.log("Email inviata con successo:", response);
         setEmailSent(true);
-        setErrorMessage("");
+        openModal();
+        e.target.reset();
       })
       .catch((error) => {
         console.error("Errore nell'invio dell'email:", error);
         setEmailSent(false);
-        setErrorMessage("C'è stato un errore, riprova.");
+        openModal();
       });
   };
 
   return (
-    <>
+<>
       <Helmet>
         <title>Contatti | Dr.ssa Sara Anna Polimeno</title>
         <meta
@@ -50,44 +59,6 @@ const Contacts = () => {
               Compila il form per richiedere maggiori informazioni!
             </p>
           </div>
-          {emailSent && showAlert ? (
-            // <p className="px-6 py-4 bg-customGreen text-white text-md rounded-md">
-            //   La tua richiesta è stata inviata correttamente.
-            // </p>
-            <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
-              <span className="text-xl inline-block mr-5 align-middle">
-                <i className="fas fa-bell" />
-              </span>
-              <span className="inline-block align-middle mr-8">
-                Email inviata correttamente!
-              </span>
-              <button
-                className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
-                onClick={() => setShowAlert(false)}
-              >
-                <span>×</span>
-              </button>
-            </div>
-          ) : null}
-          {errorMessage ? (
-            // <p className="px-6 py-4 bg-red-500 text-white text-md rounded-md">
-            //   {errorMessage}
-            // </p>
-            <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
-              <span className="text-xl inline-block mr-5 align-middle">
-                <i className="fas fa-bell" />
-              </span>
-              <span className="inline-block align-middle mr-8">
-                Errore nell&apos;invio della richiesta
-              </span>
-              <button
-                className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
-                onClick={() => setShowAlert(false)}
-              >
-                <span>×</span>
-              </button>
-            </div>
-          ) : null}
           <form className="w-full max-w-lg" onSubmit={sendEmail}>
             <div className="flex flex-wrap -mx-3 mb-4">
               <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
@@ -153,6 +124,41 @@ const Contacts = () => {
               </button>
             </div>
           </form>
+          {isModalOpen && (
+            <Modal isOpen={isModalOpen} onClose={closeModal}>
+              {emailSent ? (
+                <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
+                  <span className="text-xl inline-block mr-5 align-middle">
+                    <i className="fas fa-bell" />
+                  </span>
+                  <span className="inline-block align-middle mr-8">
+                    Email inviata correttamente!
+                  </span>
+                  <button
+                    className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+                    onClick={() => closeModal()}
+                  >
+                    <span>×</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
+                  <span className="text-xl inline-block mr-5 align-middle">
+                    <i className="fas fa-bell" />
+                  </span>
+                  <span className="inline-block align-middle mr-8">
+                    Errore nell&apos;invio della richiesta
+                  </span>
+                  <button
+                    className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
+                    onClick={() => closeModal()}
+                  >
+                    <span>×</span>
+                  </button>
+                </div>
+              )}
+            </Modal>
+          )}
         </div>
       </div>
     </>
@@ -160,3 +166,4 @@ const Contacts = () => {
 };
 
 export default Contacts;
+
