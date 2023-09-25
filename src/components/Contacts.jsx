@@ -43,7 +43,7 @@ const Contacts = () => {
   };
 
   return (
-<>
+    <>
       <Helmet>
         <title>Contatti | Dr.ssa Sara Anna Polimeno</title>
         <meta
@@ -61,7 +61,7 @@ const Contacts = () => {
           </div>
           <form className="w-full max-w-lg" onSubmit={sendEmail}>
             <div className="flex flex-wrap -mx-3 mb-4">
-              <div className="w-full md:w-1/2 px-3 mb-4 md:mb-0">
+              <div className="w-full md:w-1/2 px-3 mb-2 md:mb-0">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Nome
                 </label>
@@ -86,7 +86,7 @@ const Contacts = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap -mx-3 mb-4">
+            <div className="flex flex-wrap -mx-3 mb-2">
               <div className="w-full px-3">
                 <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   E-mail
@@ -127,34 +127,72 @@ const Contacts = () => {
           {isModalOpen && (
             <Modal isOpen={isModalOpen} onClose={closeModal}>
               {emailSent ? (
-                <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-green-500">
-                  <span className="text-xl inline-block mr-5 align-middle">
-                    <i className="fas fa-bell" />
-                  </span>
-                  <span className="inline-block align-middle mr-8">
-                    Email inviata correttamente!
-                  </span>
-                  <button
-                    className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
-                    onClick={() => closeModal()}
-                  >
-                    <span>×</span>
-                  </button>
+                <div className="relative w-auto my-6 mx-4 md:mx-auto max-w-3xl">
+                  {/*content*/}
+                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    {/*header*/}
+                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                      <h3 className="text-3xl font-semibold">Mail inviata correttamente!</h3>
+                      <button
+                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                          ×
+                        </span>
+                      </button>
+                    </div>
+                    {/*body*/}
+                    <div className="relative p-6 flex-auto">
+                      <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                        Grazie per avermi contattato, riceverai una risposta il prima possibile!
+                      </p>
+                    </div>
+                    {/*footer*/}
+                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                      <button
+                        className="bg-customGreen text-white active:bg-customGreen font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        Chiudi
+                      </button>
+                    </div>
+                  </div>
                 </div>
               ) : (
-                <div className="text-white px-6 py-4 border-0 rounded relative mb-4 bg-red-500">
-                  <span className="text-xl inline-block mr-5 align-middle">
-                    <i className="fas fa-bell" />
-                  </span>
-                  <span className="inline-block align-middle mr-8">
-                    Errore nell&apos;invio della richiesta
-                  </span>
-                  <button
-                    className="absolute bg-transparent text-2xl font-semibold leading-none right-0 top-0 mt-4 mr-6 outline-none focus:outline-none"
-                    onClick={() => closeModal()}
-                  >
-                    <span>×</span>
-                  </button>
+                <div className="relative w-auto my-6 mx-4 md:mx-auto max-w-3xl">
+                  {/*content*/}
+                  <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                    {/*header*/}
+                    <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                      <h3 className="text-3xl font-semibold text-red-600">Errore nell&apos;invio della richiesta</h3>
+                      <button
+                        className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                          ×
+                        </span>
+                      </button>
+                    </div>
+                    {/*body*/}
+                    <div className="relative p-6 flex-auto">
+                      <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                      Sembra che ci sia stato un problema nell&apos;invio della tua mail. Per favore, controlla la tua connessione e assicurati che tutti i campi siano compilati correttamente. Se il problema persiste, ti invitiamo a riprovare più tardi o a contattarci per assistenza.
+                      </p>
+                    </div>
+                    {/*footer*/}
+                    <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                      <button
+                        className="bg-customGreen text-white active:bg-customGreen font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                        type="button"
+                        onClick={() => setIsModalOpen(false)}
+                      >
+                        Chiudi
+                      </button>
+                    </div>
+                  </div>
                 </div>
               )}
             </Modal>
@@ -166,4 +204,3 @@ const Contacts = () => {
 };
 
 export default Contacts;
-
