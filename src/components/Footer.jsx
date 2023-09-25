@@ -51,7 +51,7 @@ function Footer() {
               {new Date().getFullYear()} | Copyright ©&nbsp;
               <a href="https://stefaniafracasso.netlify.app/" className="text-blueGray-500 italic hover:text-customPeach" target="_blank" rel="noreferrer">
                 Stefania Fracasso
-              </a>
+              </a> | <Link to={"/privacypolicy"} className='hover:text-customPeach cursor-pointer'>Privacy Policy</Link>
             </div>
           </div>
         </div>

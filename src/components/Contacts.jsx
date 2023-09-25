@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet";
 import Modal from "./Modal";
+import { Link } from "react-router-dom";
 
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
@@ -113,6 +114,34 @@ const Contacts = () => {
                 ></textarea>
               </div>
             </div>
+            {/* <div className="flex flex-wrap -mx-3 mb-4">
+              <input type="checkbox" id="privacy" required/>
+              <label htmlFor="privacy">Accetta l&apos;<Link to={"/privacypolicy"} target="_blank" className="hover:text-customPeach cursor-pointer">informativa sulla privacy</Link></label>
+            </div> */}
+            <div className="flex flex-wrap -mx-3 mb-4 items-center">
+  <div className="w-full px-3">
+    <input
+      type="checkbox"
+      id="privacy"
+      required
+      className="mr-2 h-5 w-5 text-customGreen focus:ring-customGreen border-gray-300 rounded"
+    />
+    <label
+      htmlFor="privacy"
+      className="text-gray-700 text-sm font-medium"
+    >
+      Accetta l&apos;
+      <Link
+        to="/privacypolicy"
+        target="_blank"
+        className="text-underline hover:text-customPeach cursor-pointer"
+      >
+        <em>informativa sulla privacy</em>
+      </Link>
+    </label>
+  </div>
+</div>
+
             <div className="md:flex md:items-center justify-center">
               <button
                 type="submit"
