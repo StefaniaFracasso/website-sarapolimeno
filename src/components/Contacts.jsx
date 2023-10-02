@@ -3,10 +3,12 @@ import emailjs from "@emailjs/browser";
 import { Helmet } from "react-helmet";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
+import LoadingDiv from "./LoadingDiv";
 
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -21,6 +23,7 @@ const Contacts = () => {
   };
 
   const sendEmail = (e) => {
+    setLoading(true);
     e.preventDefault();
 
     emailjs
@@ -33,11 +36,13 @@ const Contacts = () => {
       .then((response) => {
         console.log("Email inviata con successo:", response);
         setEmailSent(true);
+        setLoading(false)
         openModal();
         e.target.reset();
       })
       .catch((error) => {
         console.error("Errore nell'invio dell'email:", error);
+        setLoading(false)
         setEmailSent(false);
         openModal();
       });
@@ -52,6 +57,7 @@ const Contacts = () => {
           content="Compila il form di contatto e richiedi una consulenza per un piano alimentare personalizzato"
         />
       </Helmet>
+      <LoadingDiv show={loading}/>
       <div className="flex flex-col items-center align-center mt-6 md:mt-20 mx-4 h-screen">
         <div>
           <div className="text-center">
@@ -114,33 +120,29 @@ const Contacts = () => {
                 ></textarea>
               </div>
             </div>
-            {/* <div className="flex flex-wrap -mx-3 mb-4">
-              <input type="checkbox" id="privacy" required/>
-              <label htmlFor="privacy">Accetta l&apos;<Link to={"/privacypolicy"} target="_blank" className="hover:text-customPeach cursor-pointer">informativa sulla privacy</Link></label>
-            </div> */}
             <div className="flex flex-wrap -mx-3 mb-4 items-center">
-  <div className="w-full px-3">
-    <input
-      type="checkbox"
-      id="privacy"
-      required
-      className="mr-2 h-5 w-5 text-customGreen focus:ring-customGreen border-gray-300 rounded"
-    />
-    <label
-      htmlFor="privacy"
-      className="text-gray-700 text-sm font-medium"
-    >
-      Accetta l&apos;
-      <Link
-        to="/privacypolicy"
-        target="_blank"
-        className="text-underline hover:text-customPeach cursor-pointer"
-      >
-        <em>informativa sulla privacy</em>
-      </Link>
-    </label>
-  </div>
-</div>
+              <div className="w-full px-3">
+                <input
+                  type="checkbox"
+                  id="privacy"
+                  required
+                  className="mr-2 h-5 w-5 text-customGreen focus:ring-customGreen border-gray-300 rounded"
+                />
+                <label
+                  htmlFor="privacy"
+                  className="text-gray-700 text-sm font-medium"
+                >
+                  Accetta l&apos;
+                  <Link
+                    to="/privacypolicy"
+                    target="_blank"
+                    className="text-underline hover:text-customPeach cursor-pointer"
+                  >
+                    <em>informativa sulla privacy</em>
+                  </Link>
+                </label>
+              </div>
+            </div>
 
             <div className="md:flex md:items-center justify-center">
               <button
@@ -161,7 +163,9 @@ const Contacts = () => {
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     {/*header*/}
                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                      <h3 className="text-3xl font-semibold">Mail inviata correttamente!</h3>
+                      <h3 className="text-3xl font-semibold">
+                        Mail inviata correttamente!
+                      </h3>
                       <button
                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                         onClick={() => setIsModalOpen(false)}
@@ -174,7 +178,8 @@ const Contacts = () => {
                     {/*body*/}
                     <div className="relative p-6 flex-auto">
                       <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                        Grazie per avermi contattato, riceverai una risposta il prima possibile!
+                        Grazie per avermi contattato, riceverai una risposta il
+                        prima possibile!
                       </p>
                     </div>
                     {/*footer*/}
@@ -195,7 +200,9 @@ const Contacts = () => {
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                     {/*header*/}
                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                      <h3 className="text-3xl font-semibold text-red-600">Errore nell&apos;invio della richiesta</h3>
+                      <h3 className="text-3xl font-semibold text-red-600">
+                        Errore nell&apos;invio della richiesta
+                      </h3>
                       <button
                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                         onClick={() => setIsModalOpen(false)}
@@ -208,7 +215,11 @@ const Contacts = () => {
                     {/*body*/}
                     <div className="relative p-6 flex-auto">
                       <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                      Sembra che ci sia stato un problema nell&apos;invio della tua mail. Per favore, controlla la tua connessione e assicurati che tutti i campi siano compilati correttamente. Se il problema persiste, ti invitiamo a riprovare più tardi o a contattarci per assistenza.
+                        Sembra che ci sia stato un problema nell&apos;invio
+                        della tua mail. Per favore, controlla la tua connessione
+                        e assicurati che tutti i campi siano compilati
+                        correttamente. Se il problema persiste, ti invitiamo a
+                        riprovare più tardi o a contattarci per assistenza.
                       </p>
                     </div>
                     {/*footer*/}
