@@ -157,7 +157,7 @@ const Contacts = () => {
             </div>
             <div className="flex flex-col items-center justify-center h-full">
               <ReCAPTCHA
-              className="mb-2"
+                className="mb-2"
                 sitekey="6Ld8L3UoAAAAANEw2FqdUrsf0TG9f3ny80ZfrlkH"
                 onChange={() => {
                   setCaptchaCompleted(true);
@@ -166,7 +166,7 @@ const Contacts = () => {
               <button
                 type="submit"
                 className={`mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md ${
-                  !captchaCompleted ? 'disabled:opacity-50 cursor-not-allowed' : ''
+                  !captchaCompleted ? "disabled-button" : ""
                 }`}
                 data-te-ripple-init
                 data-te-ripple-color="light"

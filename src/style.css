@@ -18,3 +18,11 @@
     font-family: "Marteni";
     src: url("/fonts/Marteni.ttf");
   }
+
+  .disabled-button {
+    background-color: #ccc; 
+    color: #888; 
+    border-color: #ccc; 
+    cursor: not-allowed;
+    pointer-events: none;
+  }
