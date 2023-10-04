@@ -4,11 +4,13 @@ import { Helmet } from "react-helmet";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 import LoadingDiv from "./LoadingDiv";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contacts = () => {
   const [emailSent, setEmailSent] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [captchaCompleted, setCaptchaCompleted] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,26 +25,36 @@ const Contacts = () => {
   };
 
   const sendEmail = (e) => {
-    setLoading(true);
     e.preventDefault();
+
+    if (!captchaCompleted) {
+      alert("Completa il reCAPTCHA prima di inviare l'email.");
+      return;
+    }
+
+    setLoading(true);
+
+    const formData = new FormData(e.target);
+    const recaptchaValue = formData.get("g-recaptcha-response");
 
     emailjs
       .sendForm(
         "service_2uj6qhk",
         "template_7s0zznk",
         e.target,
-        "l5KLudr_sut4Hw_lm"
+        "l5KLudr_sut4Hw_lm",
+        { "g-recaptcha-response": recaptchaValue }
       )
       .then((response) => {
         console.log("Email inviata con successo:", response);
         setEmailSent(true);
-        setLoading(false)
+        setLoading(false);
         openModal();
         e.target.reset();
       })
       .catch((error) => {
         console.error("Errore nell'invio dell'email:", error);
-        setLoading(false)
+        setLoading(false);
         setEmailSent(false);
         openModal();
       });
@@ -57,8 +69,8 @@ const Contacts = () => {
           content="Compila il form di contatto e richiedi una consulenza per un piano alimentare personalizzato"
         />
       </Helmet>
-      <LoadingDiv show={loading}/>
-      <div className="flex flex-col items-center align-center mt-6 md:mt-20 mx-4 h-screen">
+      <LoadingDiv show={loading} />
+      <div className="flex flex-col items-center align-center mt-6 md:mt-20 mx-4 h-screen mb-24">
         <div>
           <div className="text-center">
             <h2 className="mb-4 text-5xl font-marteni">Contatti</h2>
@@ -143,13 +155,20 @@ const Contacts = () => {
                 </label>
               </div>
             </div>
-
-            <div className="md:flex md:items-center justify-center">
+            <div className="flex flex-col items-center justify-center h-full">
+              <ReCAPTCHA
+              className="mb-2"
+                sitekey="6Ld8L3UoAAAAANEw2FqdUrsf0TG9f3ny80ZfrlkH"
+                onChange={() => {
+                  setCaptchaCompleted(true);
+                }}
+              />
               <button
                 type="submit"
                 className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
                 data-te-ripple-init
                 data-te-ripple-color="light"
+                disabled={!captchaCompleted}
               >
                 Invia
               </button>
