@@ -165,7 +165,9 @@ const Contacts = () => {
               />
               <button
                 type="submit"
-                className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
+                className={`mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md ${
+                  !captchaCompleted ? 'disabled:opacity-50 cursor-not-allowed' : ''
+                }`}
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 disabled={!captchaCompleted}
@@ -215,9 +217,7 @@ const Contacts = () => {
                 </div>
               ) : (
                 <div className="relative w-auto my-6 mx-4 md:mx-auto max-w-3xl">
-                  {/*content*/}
                   <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
-                    {/*header*/}
                     <div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
                       <h3 className="text-3xl font-semibold text-red-600">
                         Errore nell&apos;invio della richiesta
