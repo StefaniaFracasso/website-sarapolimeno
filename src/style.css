@@ -19,6 +19,9 @@
     src: url("/fonts/Marteni.ttf");
   }
 
+  html, body {
+    overflow-x: hidden;
+  }
   .disabled-button {
     background-color: #ccc; 
     color: #888; 
