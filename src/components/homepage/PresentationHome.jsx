@@ -51,7 +51,7 @@ const PresentationHome = () => {
             che il benessere dipenda dalla comprensione delle esigenze
             individuali e dalla creazione di percorsi personalizzati.
           </p>
-          <p className="my-3">
+          <p className="my-3 sm:text-lg md:text-base">
             Sono qui per aiutarti a raggiungere i tuoi obiettivi di salute come
             Biologo Nutrizionista a Milano. Se stai cercando un professionista
             esperto per migliorare il tuo benessere attraverso l&apos;alimentazione,
