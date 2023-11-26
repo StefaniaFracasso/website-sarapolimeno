@@ -30,7 +30,7 @@ const PresentationHome = () => {
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
-          <p className="my-3">
+          <p className="my-3 sm:text-lg md:text-base">
             Sono la Dott.ssa Sara Anna Polimeno, Biologo Nutrizionista con una
             formazione di eccellenza conseguita presso l&apos;<strong>Università Campus
             Bio Medico di Roma</strong>, dove ho ottenuto una votazione di 110/110 con
@@ -38,7 +38,7 @@ const PresentationHome = () => {
             dall&apos;Università della Tuscia di Viterbo (Numero di
             registrazione: AA_072681).
           </p>
-          <p className="my-3">
+          <p className="my-3 sm:text-lg md:text-base">
             <strong>La mia missione è andare oltre la semplice consulenza nutrizionale.</strong> <br />
             Sono guidata dall&apos;empatia e dalla profonda comprensione delle
             sfide che i miei pazienti affrontano. La mia esperienza mi ha
@@ -46,7 +46,7 @@ const PresentationHome = () => {
             specifici. <br />Attualmente, offro i miei servizi come <strong>Biologo
             Nutrizionista a Milano</strong> in tre studi. 
           </p>
-          <p className="my-3">
+          <p className="my-3 sm:text-lg md:text-base">
             Fornisco un <strong>sostegno completo che va oltre la dieta</strong>, perché credo
             che il benessere dipenda dalla comprensione delle esigenze
             individuali e dalla creazione di percorsi personalizzati.
@@ -61,7 +61,7 @@ const PresentationHome = () => {
           <Link to="/chisono">
             <button
               type="button"
-              className="mt-3 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
+              className="mt-3 xs:mt-4 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
               data-te-ripple-init
               data-te-ripple-color="light"
             >
