@@ -30,6 +30,7 @@ const ChiSono = () => {
           >
             <img
               src="/assets/img/foto-sara-1.jpg"
+              loading="lazy"
               alt="dr.ssa Sara Anna Polimeno"
               className="rounded-lg w-3/4 mx-auto"
             />

@@ -10,6 +10,7 @@ const PresentationHome = () => {
       >
         <img
           src="/assets/img/foto-sara-2.jpg"
+          loading="lazy"
           alt="sara polimeno"
           className="rounded-lg w-3/4 translate-x-5"
         />
