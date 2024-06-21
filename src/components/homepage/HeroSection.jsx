@@ -11,6 +11,7 @@ const HeroSection = () => {
               <Link to={'/contatti'}>
               <button
                 type="button"
+                aria-label="link pagina contattami"
                 className="rounded border-2 border-neutral-50 px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:bg-customPeach"
                 data-te-ripple-init
                 data-te-ripple-color="light"

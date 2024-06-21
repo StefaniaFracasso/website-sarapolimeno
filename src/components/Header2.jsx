@@ -62,6 +62,7 @@ const Header2 = () => {
             <Link to={"/contatti"}>
               <button
                 type="button"
+                aria-label="link pagina contatti"
                 className="mb-4 lg:mb-0 lg:mt-2 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
                 data-te-ripple-init
                 data-te-ripple-color="light"
@@ -119,6 +120,7 @@ const Header2 = () => {
                 <Link to={"/contatti"} onClick={closeMenu}>
                     <button
                       type="button"
+                      aria-label="link pagina contattami"
                       className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
                       data-te-ripple-init
                       data-te-ripple-color="light"

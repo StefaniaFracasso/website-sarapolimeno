@@ -128,6 +128,7 @@ const ServicesHome = () => {
               <img
                 src="/assets/icons/weight-scale.png"
                 className="w-1/2 mx-auto my-auto"
+                alt='icona bilancia'
               />
             }
             name="Percorsi di dimagrimento"
@@ -140,6 +141,7 @@ const ServicesHome = () => {
               <img
                 src="/assets/icons/healthy-living.png"
                 className="w-1/2 mx-auto my-auto"
+                alt='icona nutrizione'
               />
             }
             name="Nutrizione clinica"
@@ -152,6 +154,7 @@ const ServicesHome = () => {
               <img
                 src="/assets/icons/nutrition-plan.png"
                 className="w-1/2 mx-auto my-auto"
+                alt='icona piano nutrizionale'
               />
             }
             name="Educazione alimentare"
@@ -163,6 +166,7 @@ const ServicesHome = () => {
         <Link to={"/laprimavisita"}>
         <button
           type="button"
+          aria-label="scopri di più"
           className="mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
           data-te-ripple-init
           data-te-ripple-color="light"

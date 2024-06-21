@@ -61,6 +61,7 @@ const PresentationHome = () => {
           <Link to="/chisono">
             <button
               type="button"
+              aria-label="leggi di più"
               className="mt-3 xs:mt-4 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md"
               data-te-ripple-init
               data-te-ripple-color="light"

@@ -14,17 +14,17 @@ function Footer() {
           <div className="w-full lg:w-4/12 px-4 flex justify-start lg:justify-center">
             <div>
               <p className="text-white mb-2">Seguimi sui social:</p>
-              <button className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
+              <button aria-label="link facebook" className="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
                 <a href="https://www.facebook.com/profile.php?id=100063472213879" target="_blank" rel="noreferrer">
                   <FontAwesomeIcon icon={faFacebook} />
                 </a>
               </button>
-              <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
+              <button aria-label="link instagram" className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
                 <a href="instagram://user?username=saraanna_nutrizionista">
                   <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </button>
-              <button className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
+              <button aria-label="link linkedin" className="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 hover:scale-125 transition duration-150 ease-in-out hover:text-customPeach" type="button">
                 <a href="https://www.linkedin.com/in/sara-anna-polimeno-29691994" target='_blank' rel='noreferrer'>
                   <FontAwesomeIcon icon={faLinkedin} />
                 </a>

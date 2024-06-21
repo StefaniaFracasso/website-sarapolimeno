@@ -36,6 +36,7 @@ const ReviewsHome = () => {
         renderArrowPrev={(onClickHandler, hasPrev, label) =>
           hasPrev && (
             <button
+            aria-label="freccia contenuto precedente"
               type="button"
               onClick={onClickHandler}
               title={label}
@@ -49,6 +50,7 @@ const ReviewsHome = () => {
         renderArrowNext={(onClickHandler, hasNext, label) =>
           hasNext && (
             <button
+            aria-label="freccia contenuto successivo"
               type="button"
               onClick={onClickHandler}
               title={label}

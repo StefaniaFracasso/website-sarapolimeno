@@ -11,6 +11,7 @@ const Contacts = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [captchaCompleted, setCaptchaCompleted] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,6 +23,7 @@ const Contacts = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setIsButtonDisabled(false);
   };
 
   const sendEmail = (e) => {
@@ -33,6 +35,7 @@ const Contacts = () => {
     }
 
     setLoading(true);
+    setIsButtonDisabled(true);
 
     const formData = new FormData(e.target);
     const recaptchaValue = formData.get("g-recaptcha-response");
@@ -165,12 +168,11 @@ const Contacts = () => {
               />
               <button
                 type="submit"
-                className={`mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md ${
-                  !captchaCompleted ? "disabled-button" : ""
-                }`}
+                aria-label="invia richiesta"
+                className={`mb-10 rounded border-2 border-customGreen px-7 pb-[8px] pt-[10px] text-sm font-medium uppercase leading-normal text-customGreen transition duration-150 ease-in-out hover:bg-customGreen hover:text-neutral-50 shadow-md ${(!captchaCompleted || isButtonDisabled) ? "disabled-button" : ""}`}
                 data-te-ripple-init
                 data-te-ripple-color="light"
-                disabled={!captchaCompleted}
+                disabled={!captchaCompleted || isButtonDisabled}
               >
                 Invia
               </button>
@@ -190,6 +192,7 @@ const Contacts = () => {
                       <button
                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                         onClick={() => setIsModalOpen(false)}
+                        aria-label="chiudi"
                       >
                         <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
                           ×
@@ -208,6 +211,7 @@ const Contacts = () => {
                       <button
                         className="bg-customGreen text-white active:bg-customGreen font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
+                        aria-label="chiudi"
                         onClick={() => setIsModalOpen(false)}
                       >
                         Chiudi
@@ -225,6 +229,7 @@ const Contacts = () => {
                       <button
                         className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                         onClick={() => setIsModalOpen(false)}
+                        aria-label="chiudi"
                       >
                         <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
                           ×
@@ -246,6 +251,7 @@ const Contacts = () => {
                       <button
                         className="bg-customGreen text-white active:bg-customGreen font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                         type="button"
+                        aria-label="chiudi"
                         onClick={() => setIsModalOpen(false)}
                       >
                         Chiudi
